@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C6A9BDC2-3391-150E-2B8E-C0A7F33093CD}") = "Squong", "Assembly-CSharp.csproj", "{623DC4CC-49B0-AEFF-4254-0DD074F89E26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{623DC4CC-49B0-AEFF-4254-0DD074F89E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623DC4CC-49B0-AEFF-4254-0DD074F89E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623DC4CC-49B0-AEFF-4254-0DD074F89E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623DC4CC-49B0-AEFF-4254-0DD074F89E26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
