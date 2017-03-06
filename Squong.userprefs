@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\BackTargetSimpleBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\MoveBallnoPhysics.cs">
     <Files>
       <File FileName="Assets\_scripts\Arena.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\ExitBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\MoveBallnoPhysics.cs" Line="7" Column="1" />
-      <File FileName="Assets\_scripts\TouchScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\MoveBallnoPhysics.cs" Line="75" Column="62" />
+      <File FileName="Assets\_scripts\TouchScript.cs" Line="17" Column="48" />
       <File FileName="Assets\_scripts\CameraShake.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\BackTargetSimpleBehavior.cs" Line="42" Column="26" />
+      <File FileName="Assets\_scripts\BackTargetSimpleBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\ButtonContinue.cs" Line="1" Column="1" />
     </Files>

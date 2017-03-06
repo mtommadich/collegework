@@ -31,13 +31,12 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	public AudioClip bounceMiss;
 	AudioSource audioSource;
 	private GameObject paddle;
-	public Image hurtImage;
 	private float paddlex;
 	private float paddley;
 	private float deltax;
 	private float deltay;
 	Vector3 startPos;
-	public Color flashColour = new Color(1.0f,0.0f,0.0f,1.0f);
+
 
 
 	// Use this for initialization
@@ -74,14 +73,8 @@ public class MoveBallnoPhysics : MonoBehaviour {
 
 		//ball hit the screen
 		} else if (transform.position.z <= zmin && speedZ < 0.0f) {
-
 			speedZ = startSpeedZ; // reset speed to default
 			CameraShake.Shake(0.1f, 0.2f);
-				Debug.Log ("missed ball");
-				hurtImage.color = flashColour;
-				hurtImage.color = Color.Lerp (hurtImage.color, Color.clear, 50f);
-
-
 			bounceFX (bounceMiss);
 		}
 
