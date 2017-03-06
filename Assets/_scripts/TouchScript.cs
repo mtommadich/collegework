@@ -7,13 +7,14 @@ using System.Collections;
 
 public class TouchScript : MonoBehaviour {
 	Vector3 mousePos;
-	public GameObject paddle;
+	private GameObject paddle;
 	GameObject ball;
 	MoveBallnoPhysics ballMover;
 
 	void Start(){
 		ball = GameObject.FindGameObjectWithTag ("ball");
 		ballMover = ball.GetComponent<MoveBallnoPhysics> ();
+		paddle = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	void Update(){
