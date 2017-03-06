@@ -6,10 +6,12 @@ using UnityEngine;
 using System.Collections;
 
 public class ExitBehaviour : MonoBehaviour {
-	public GameObject ball;
-	MoveBallnoPhysics ballMovement;
-	public GameObject arena;
+	private GameObject ball;
+	private GameObject arena;
+	private GameObject gameManager;
 	Arena arenaScript;
+	MoveBallnoPhysics ballMovement;
+	GameManager managerScript;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,13 @@ public class ExitBehaviour : MonoBehaviour {
 
 		//find the arena behaviour script and store it in a local variable
 		arenaScript = arena.GetComponent<Arena> ();
+
+		//find the GameManager Object and store it in a local variable
+		gameManager = GameObject.FindGameObjectWithTag("manager");
+		//find the GameManager's GameManager component script and store it in a local variable
+		managerScript = gameManager.GetComponent<GameManager> ();
+
+
 	}
 	
 	// Update is called once per frame
@@ -35,13 +44,13 @@ public class ExitBehaviour : MonoBehaviour {
 		if (other.CompareTag ("ball") && ballMovement.speedZ >0) {
 			
 			//we do this for now - this behaviour will become the "Endless mode" once mission based gameplay has been developed
-			arenaScript.spawnTargets ();
-			Destroy (gameObject);
+			//arenaScript.spawnTargets ();
+			//Destroy (gameObject);
 
 
 			//but we should be doing this:
 			//ballMovement.stopBall (transform.position);
-			//arenaScript.missionClear();
+			managerScript.missionClear();
 
 
 			}

@@ -45,12 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ButtonContinue.cs" />
      <Compile Include="Assets\_scripts\Arena.cs" />
      <Compile Include="Assets\_scripts\BackTargetSimpleBehavior.cs" />
      <Compile Include="Assets\_scripts\CameraShake.cs" />
      <Compile Include="Assets\_scripts\DestroyByTime.cs" />
      <Compile Include="Assets\_scripts\ExitBehaviour.cs" />
-     <Compile Include="Assets\_scripts\Game.cs" />
+     <Compile Include="Assets\_scripts\GameManager.cs" />
      <Compile Include="Assets\_scripts\LeftTargetSimpleBehavior.cs" />
      <Compile Include="Assets\_scripts\MoveBallnoPhysics.cs" />
      <Compile Include="Assets\_scripts\TouchScript.cs" />

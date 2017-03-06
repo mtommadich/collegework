@@ -18,7 +18,7 @@ public class Arena : MonoBehaviour {
 	public GameObject[] obstacles;
 	public GameObject[] hazards;
 	public GameObject gameManager;
-	Game manager;
+	GameManager manager;
 	public GameObject exit;
 
 	public int targetCount;
@@ -31,11 +31,11 @@ public class Arena : MonoBehaviour {
 
 		//find the GameManager object
 		gameManager = GameObject.FindGameObjectWithTag ("manager");
-		manager = gameManager.GetComponent<Game> ();
+		manager = gameManager.GetComponent<GameManager> ();
 
 		//Send Scene title to GameManager
 		//manager.setUnlockedScene(
-		Debug.Log (SceneManager.GetActiveScene().name);
+		Debug.Log ("Entering "+SceneManager.GetActiveScene().name);
 		/* Shuffle the coordinate values array (backTargetValues) of the back targets 
 		 * in order to get a randomized array of possible target positions.
 		 */
