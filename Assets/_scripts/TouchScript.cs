@@ -10,6 +10,7 @@ public class TouchScript : MonoBehaviour {
 	private GameObject paddle;
 	GameObject ball;
 	MoveBallnoPhysics ballMover;
+	bool canMove = false;
 
 	void Start(){
 		ball = GameObject.FindGameObjectWithTag ("ball");
@@ -18,15 +19,22 @@ public class TouchScript : MonoBehaviour {
 	}
 
 	void Update(){
-		if (ballMover.ballStopped && Input.GetMouseButtonUp(0)) {
-			ballMover.ballStopped = false;
-		}
 
-		if (Input.GetMouseButton (0)) {
-			mousePos = Input.mousePosition;
-			mousePos.z = 3.63f;
-			mousePos = Camera.main.ScreenToWorldPoint (mousePos);
-			paddle.transform.position = mousePos;
+		if (canMove) {
+			if (ballMover.ballStopped && Input.GetMouseButtonUp (0)) {
+				ballMover.ballStopped = false;
+			}
+
+			if (Input.GetMouseButton (0)) {
+				mousePos = Input.mousePosition;
+				mousePos.z = 3.63f;
+				mousePos = Camera.main.ScreenToWorldPoint (mousePos);
+				paddle.transform.position = mousePos;
+			}
 		}
+	}
+
+	public void setMovable(){
+		canMove = true;
 	}
 }
