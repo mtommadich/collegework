@@ -8,8 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: ball5
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-    _SPECULARHIGHLIGHTS_OFF
+  m_ShaderKeywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -85,16 +84,16 @@ Material:
       second: 0
     - first:
         name: _GlossMapScale
-      second: 0
+      second: 0.89
     - first:
         name: _Glossiness
       second: 0
     - first:
         name: _GlossyReflections
-      second: 0
+      second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 0.27
     - first:
         name: _Mode
       second: 0
@@ -125,10 +124,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.24137926, g: 0, b: 1, a: 1}
+      second: {r: 0.73357016, g: 0.47794116, b: 1, a: 1}
     - first:
         name: _EmisColor
       second: {r: 1, g: 0, b: 0, a: 0}
     - first:
         name: _EmissionColor
-      second: {r: 0, g: 0.30984905, b: 3.456, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
