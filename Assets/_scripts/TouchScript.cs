@@ -10,7 +10,7 @@ public class TouchScript : MonoBehaviour {
 	private GameObject paddle;
 	GameObject ball;
 	MoveBallnoPhysics ballMover;
-	bool canMove = false;
+	public bool canMove;
 
 	void Start(){
 		ball = GameObject.FindGameObjectWithTag ("ball");
