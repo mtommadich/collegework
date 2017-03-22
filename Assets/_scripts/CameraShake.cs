@@ -14,10 +14,12 @@ public class CameraShake : MonoBehaviour {
 	private float _timeAtCurrentFrame;
 	private float _timeAtLastFrame;
 	private float _fakeDelta;
+	public GameObject[] cracks;
 
 	void Awake()
 	{
 		instance = this;
+
 	}
 
 	void Update() {
@@ -31,6 +33,10 @@ public class CameraShake : MonoBehaviour {
 		instance._originalPos = instance.gameObject.transform.localPosition;
 		instance.StopAllCoroutines();
 		instance.StartCoroutine(instance.cShake(duration, amount));
+	}
+
+	public void Crack (Vector3 crackPosition){
+		Instantiate (cracks[Random.Range(0,cracks.Length)], crackPosition, Quaternion.identity);
 	}
 
 	public IEnumerator cShake (float duration, float amount) {

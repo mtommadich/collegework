@@ -31,11 +31,14 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	public AudioClip bounceMiss;
 	AudioSource audioSource;
 	private GameObject paddle;
+//	private GameObject camera;
 	private float paddlex;
 	private float paddley;
 	private float deltax;
 	private float deltay;
 	Vector3 startPos;
+	GameObject camera;
+	CameraShake shaker;
 
 
 
@@ -43,7 +46,8 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	void Start () {
 		audioSource = GetComponent <AudioSource> ();
 		paddle = GameObject.FindGameObjectWithTag("Player");
-
+		camera = GameObject.FindGameObjectWithTag("MainCamera");
+		shaker = camera.GetComponent<CameraShake> ();
 
 		//startPos = new Vector3 (0.0f, 1.5f, 1.9f);
 		startPos = paddle.transform.position;
@@ -74,8 +78,11 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		//ball hit the screen
 		} else if (transform.position.z <= zmin && speedZ < 0.0f) {
 			speedZ = startSpeedZ; // reset speed to default
+			shaker.Crack(transform.position);
 			CameraShake.Shake(0.1f, 0.2f);
+
 			bounceFX (bounceMiss);
+
 		}
 
 		if (transform.position.x >= xmax - .2f && speedX >0.0f){
