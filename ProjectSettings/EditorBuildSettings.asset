@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/_scenes/scene4.unity
   - enabled: 1
     path: Assets/_scenes/scene5.unity
+  - enabled: 1
+    path: Assets/_scenes/Credits.unity

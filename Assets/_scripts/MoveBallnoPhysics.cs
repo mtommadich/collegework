@@ -10,7 +10,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 
 	//public bool paddleHit;
 	public bool ballStopped;
-
+	public float fakeGravity;
 	public int zmax;
 	public int zmin;
 	public int xmax;
@@ -31,13 +31,14 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	public AudioClip bounceMiss;
 	AudioSource audioSource;
 	private GameObject paddle;
-//	private GameObject camera;
 	private float paddlex;
 	private float paddley;
 	private float deltax;
 	private float deltay;
 	Vector3 startPos;
 	GameObject camera;
+	private GameObject manager;
+	private GameManager managerScript;
 	CameraShake shaker;
 
 
@@ -48,6 +49,8 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		paddle = GameObject.FindGameObjectWithTag("Player");
 		camera = GameObject.FindGameObjectWithTag("MainCamera");
 		shaker = camera.GetComponent<CameraShake> ();
+		manager = GameObject.FindGameObjectWithTag ("manager");
+		managerScript = manager.GetComponent<GameManager> ();
 
 		//startPos = new Vector3 (0.0f, 1.5f, 1.9f);
 		startPos = paddle.transform.position;
@@ -80,7 +83,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			speedZ = startSpeedZ; // reset speed to default
 			shaker.Crack(transform.position);
 			CameraShake.Shake(0.1f, 0.2f);
-
+			managerScript.subtractLive();
 			bounceFX (bounceMiss);
 
 		}
@@ -104,6 +107,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		}
 
 		//speedY -= 0.01f; this adds some fake gravity. Don't really like it... but we can perhaps use it later
+		speedY -= fakeGravity;
 	}
 	//detects collision with the paddle
 	void OnTriggerEnter(Collider other) {

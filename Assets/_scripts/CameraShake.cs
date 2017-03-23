@@ -34,7 +34,7 @@ public class CameraShake : MonoBehaviour {
 		instance.StopAllCoroutines();
 		instance.StartCoroutine(instance.cShake(duration, amount));
 	}
-
+	//Cracks the screen / @author Mario Tommadich 
 	public void Crack (Vector3 crackPosition){
 		Instantiate (cracks[Random.Range(0,cracks.Length)], crackPosition, Quaternion.identity);
 	}
