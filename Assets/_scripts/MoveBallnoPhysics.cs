@@ -8,9 +8,11 @@ using UnityEngine.UI;
 
 public class MoveBallnoPhysics : MonoBehaviour {
 
-	//public bool paddleHit;
-	public bool ballStopped;
 
+	public bool ballStopped;
+	public bool isBoosted;
+	public bool hasGravity;
+	public float fakeGravity;
 	public int zmax;
 	public int zmin;
 	public int xmax;
@@ -36,6 +38,10 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	private float deltax;
 	private float deltay;
 	Vector3 startPos;
+	GameObject camera;
+	private GameObject manager;
+	private GameManager managerScript;
+	CameraShake shaker;
 
 
 
@@ -43,15 +49,20 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	void Start () {
 		audioSource = GetComponent <AudioSource> ();
 		paddle = GameObject.FindGameObjectWithTag("Player");
+		camera = GameObject.FindGameObjectWithTag("MainCamera");
+		shaker = camera.GetComponent<CameraShake> ();
+		manager = GameObject.FindGameObjectWithTag ("manager");
+		managerScript = manager.GetComponent<GameManager> ();
 
-
-		//startPos = new Vector3 (0.0f, 1.5f, 1.9f);
 		startPos = paddle.transform.position;
 		speedX = startSpeedX;
 		speedY = startSpeedY;
 		speedZ = startSpeedZ;
 		//stopBall (startPos);
 		ballStopped = true;
+		hasGravity = false;
+		isBoosted = false;
+		fakeGravity = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -74,8 +85,11 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		//ball hit the screen
 		} else if (transform.position.z <= zmin && speedZ < 0.0f) {
 			speedZ = startSpeedZ; // reset speed to default
+			shaker.Crack(transform.position);
 			CameraShake.Shake(0.1f, 0.2f);
+			managerScript.subtractLive();
 			bounceFX (bounceMiss);
+
 		}
 
 		if (transform.position.x >= xmax - .2f && speedX >0.0f){
@@ -96,7 +110,8 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			bounceFX (bounceWall);
 		}
 
-		//speedY -= 0.01f; this adds some fake gravity. Don't really like it... but we can perhaps use it later
+		//speedY -= 0.01f; this adds some fake gravity. This is used by the gravity effector target
+		speedY -= fakeGravity;
 	}
 	//detects collision with the paddle
 	void OnTriggerEnter(Collider other) {
@@ -110,8 +125,13 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			speedX = deltax * 6.0f;
 			speedY = deltay * 6.0f; 
 
-			speedZ = -speedZ;
-			speedZ += 0.1f;
+			if (isBoosted) {
+				isBoosted = !isBoosted;
+				speedZ = startSpeedZ;
+			} else {
+				speedZ = -speedZ;
+				speedZ += 0.1f;
+			}
 		} else {
 			return;
 		}
@@ -141,9 +161,18 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		ballStopped = true;
 	}
 
-	//flashes the screen red when called
-//	public void flashScreen(Color color){
-//		hurtImage.color = Color.Lerp (hurtImage.color, Color.clear, 5f);
-//
-//	}
+	public void toggleGravity(){
+		hasGravity = !hasGravity;
+
+		if (hasGravity) {
+			fakeGravity = 0.06f;
+		} else {
+			fakeGravity = 0.0f;
+		}			
+	}
+
+	public void speedBoost(){
+		speedZ *= 2.0f;
+		isBoosted = true;
+	}
 }

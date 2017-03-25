@@ -14,18 +14,27 @@ public class GameManager : MonoBehaviour {
 	public int hiScore;
 	public int score;
 	public GameObject loadingimage;
+	public GameObject camera;
+	private TouchScript touchScript;
 //	public bool canContinue;
+	public bool isPaused;
 
 
 	// Use this for initialization
 	void Start () {		
-		unlockedScene = SceneManager.GetActiveScene().name;
+		camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		touchScript = camera.GetComponent<TouchScript> ();
+
+
+		if (!SceneManager.GetActiveScene ().name.Equals("Credits")) {
+			unlockedScene = SceneManager.GetActiveScene ().name;
+		}
 		maxLives = 8;
 		currLives = 8;
 		difficulty=1;
 		hiScore = 0;
 		score = 0;
-
+		isPaused = false;
 
 		if (!PlayerPrefs.HasKey ("unlockedScene")) {
 				Debug.Log("no save data found. Creating data now");
@@ -44,7 +53,8 @@ public class GameManager : MonoBehaviour {
 			
 			Debug.Log("Contents of save data:");
 
-			if(SceneManager.GetActiveScene().buildIndex != 0){
+			if(SceneManager.GetActiveScene().buildIndex != 0 
+				&& !SceneManager.GetActiveScene ().name.Equals("Credits")){
 				PlayerPrefs.SetString ("unlockedScene", SceneManager.GetActiveScene ().name);
 			}
 
@@ -110,11 +120,16 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt ("maxLives", maxLives);
 		PlayerPrefs.SetInt ("difficulty", difficulty);
 		PlayerPrefs.SetInt ("hiScore", hiScore);
-		PlayerPrefs.SetInt ("currentLives", currLives);
+		//We don't need to save currLives as they get reset to maximum at gamestart. 
+		//CurrLives only determine if a mission is failed.
+		//PlayerPrefs.SetInt ("currentLives", currLives);
 
 	}
 
 	public void loadNextScene (){
+		if ((SceneManager.GetActiveScene ().buildIndex + 1).Equals( null)) {
+			Debug.Log ("This is the perfect place to end the game and run the credits");
+		}
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 
 	}
@@ -127,8 +142,9 @@ public class GameManager : MonoBehaviour {
 	public void subtractLive(){
 		if (currLives > 1) {
 			currLives -= 1;
+			Debug.Log ("Lives Left: " + currLives);
 		} else {
-		//	gameOver ();
+			gameOver ();
 			Debug.Log("Game Over");
 		}
 	}
@@ -140,6 +156,23 @@ public class GameManager : MonoBehaviour {
 
 	}
 	//TO DO:
-	//public void gameOver(){};
-	//
+	public void gameOver(){
+		//here we should present the user with the option to continue the current progress 
+		//in exchange for watching an advertisement or to start the mission over.
+		//Right now though, we finish the game and return to the main menu.
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void togglePause(){
+		isPaused = !isPaused;
+
+		if (isPaused) {
+			Time.timeScale = 0;
+			//touchScript.enabled = false; - buggy
+		} else {
+			Time.timeScale = 1;
+		//	touchScript.enabled = true; - buggy
+		}
+	}
+
 }
