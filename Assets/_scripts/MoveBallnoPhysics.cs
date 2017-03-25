@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public class MoveBallnoPhysics : MonoBehaviour {
 
-	//public bool paddleHit;
+
 	public bool ballStopped;
+	public bool hasGravity;
 	public float fakeGravity;
 	public int zmax;
 	public int zmin;
@@ -52,13 +53,14 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		manager = GameObject.FindGameObjectWithTag ("manager");
 		managerScript = manager.GetComponent<GameManager> ();
 
-		//startPos = new Vector3 (0.0f, 1.5f, 1.9f);
 		startPos = paddle.transform.position;
 		speedX = startSpeedX;
 		speedY = startSpeedY;
 		speedZ = startSpeedZ;
 		//stopBall (startPos);
 		ballStopped = true;
+		hasGravity = false;
+		fakeGravity = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -106,7 +108,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			bounceFX (bounceWall);
 		}
 
-		//speedY -= 0.01f; this adds some fake gravity. Don't really like it... but we can perhaps use it later
+		//speedY -= 0.01f; this adds some fake gravity. This is used by the gravity effector target
 		speedY -= fakeGravity;
 	}
 	//detects collision with the paddle
@@ -152,9 +154,13 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		ballStopped = true;
 	}
 
-	//flashes the screen red when called
-//	public void flashScreen(Color color){
-//		hurtImage.color = Color.Lerp (hurtImage.color, Color.clear, 5f);
-//
-//	}
+	public void toggleGravity(){
+		hasGravity = !hasGravity;
+
+		if (hasGravity) {
+			fakeGravity = 0.06f;
+		} else {
+			fakeGravity = 0.0f;
+		}			
+	}
 }

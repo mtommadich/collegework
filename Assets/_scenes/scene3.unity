@@ -397,6 +397,29 @@ Prefab:
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011522948136, guid: 2a3a59a0946268948b6b3d235a244a04,
+        type: 2}
+      propertyPath: backTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959,
+        type: 2}
+    - target: {fileID: 114000011522948136, guid: 2a3a59a0946268948b6b3d235a244a04,
+        type: 2}
+      propertyPath: backTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959,
+        type: 2}
+    - target: {fileID: 114000011522948136, guid: 2a3a59a0946268948b6b3d235a244a04,
+        type: 2}
+      propertyPath: backTargets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959,
+        type: 2}
+    - target: {fileID: 114000013874789280, guid: 2a3a59a0946268948b6b3d235a244a04,
+        type: 2}
+      propertyPath: fakeGravity
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a3a59a0946268948b6b3d235a244a04, type: 2}
   m_IsPrefabParent: 0

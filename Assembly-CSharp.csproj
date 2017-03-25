@@ -521,6 +521,7 @@
      <Compile Include="Assets\_scripts\DestroyByTime.cs" />
      <Compile Include="Assets\_scripts\ExitBehaviour.cs" />
      <Compile Include="Assets\_scripts\GameManager.cs" />
+     <Compile Include="Assets\_scripts\GravityEffectorBehavior.cs" />
      <Compile Include="Assets\_scripts\LeftTargetSimpleBehavior.cs" />
      <Compile Include="Assets\_scripts\MoveBallnoPhysics.cs" />
      <Compile Include="Assets\_scripts\TouchScript.cs" />
