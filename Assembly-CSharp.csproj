@@ -524,6 +524,7 @@
      <Compile Include="Assets\_scripts\GravityEffectorBehavior.cs" />
      <Compile Include="Assets\_scripts\LeftTargetSimpleBehavior.cs" />
      <Compile Include="Assets\_scripts\MoveBallnoPhysics.cs" />
+     <Compile Include="Assets\_scripts\SpringEffectorBehavior.cs" />
      <Compile Include="Assets\_scripts\TouchScript.cs" />
      <Compile Include="Assets\_scripts\moveBall.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />

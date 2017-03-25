@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 48cbfc7f52bf35f4b88268326383f1bd, type: 2}
+  - {fileID: 2100000, guid: de6ed44541b4a2b4c8f5c9b2ed304e51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,4 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetHealth: 1
-  explosion: {fileID: 1000013426282752, guid: 43b6c5fbb72ce894284e25db4a4d0b2f, type: 2}
+  explosion: {fileID: 1000012770364118, guid: e8ff02ad1bcfbd14da801c0dcf2da504, type: 2}

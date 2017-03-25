@@ -4,7 +4,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GravityEffectorBehavior : MonoBehaviour {
+public class SpringEffectorBehavior : MonoBehaviour {
 	public int targetHealth;
 	private GameObject arena;
 	private GameObject ball;
@@ -35,7 +35,7 @@ public class GravityEffectorBehavior : MonoBehaviour {
 		if (other.CompareTag ("ball")) {
 			//behavior 1 subtract health
 			targetHealth--;
-			ballScript.toggleGravity ();
+			ballScript.speedBoost ();
 
 			//if target health is 0:
 			if (targetHealth < 1) {
@@ -48,17 +48,14 @@ public class GravityEffectorBehavior : MonoBehaviour {
 				Destroy (gameObject);
 			}
 
-			//behavior 2
+			/*behavior 2
 			Vector3 tmpPosition = transform.position;
 			int randomPosition = Random.Range(0, arenaScript.backTargetValues.Length);
 			tmpPosition.x = arenaScript.backTargetValues[randomPosition].x;
 			tmpPosition.y = arenaScript.backTargetValues[randomPosition].y;
 			transform.position = tmpPosition;
-
-
-
-
-
+			*/
 		}
 	}
 }
+

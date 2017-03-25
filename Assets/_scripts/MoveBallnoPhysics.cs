@@ -10,6 +10,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 
 
 	public bool ballStopped;
+	public bool isBoosted;
 	public bool hasGravity;
 	public float fakeGravity;
 	public int zmax;
@@ -60,6 +61,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		//stopBall (startPos);
 		ballStopped = true;
 		hasGravity = false;
+		isBoosted = false;
 		fakeGravity = 0.0f;
 	}
 	
@@ -123,8 +125,13 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			speedX = deltax * 6.0f;
 			speedY = deltay * 6.0f; 
 
-			speedZ = -speedZ;
-			speedZ += 0.1f;
+			if (isBoosted) {
+				isBoosted = !isBoosted;
+				speedZ = startSpeedZ;
+			} else {
+				speedZ = -speedZ;
+				speedZ += 0.1f;
+			}
 		} else {
 			return;
 		}
@@ -162,5 +169,10 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		} else {
 			fakeGravity = 0.0f;
 		}			
+	}
+
+	public void speedBoost(){
+		speedZ *= 2.0f;
+		isBoosted = true;
 	}
 }
