@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {		
-
 		unlockedScene = SceneManager.GetActiveScene().name;
 		maxLives = 8;
 		currLives = 8;
@@ -85,7 +84,6 @@ public class GameManager : MonoBehaviour {
 //	}
 
 	public void continueGame(){
-		loadingimage.SetActive (true);
 		SceneManager.LoadScene (unlockedScene);
 	}
 
@@ -117,7 +115,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void loadNextScene (){
-		loadingimage.SetActive (true);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 
 	}

@@ -136,11 +136,6 @@ Prefab:
       propertyPath: canMove
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010449132892, guid: ff723931e28e71b4bb507b95f133d9aa,
-        type: 2}
-      propertyPath: loadingimage
-      value: 
-      objectReference: {fileID: 2001853478}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff723931e28e71b4bb507b95f133d9aa, type: 2}
   m_IsPrefabParent: 0
@@ -405,8 +400,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a3a59a0946268948b6b3d235a244a04, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2001853478 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1460600640382020, guid: f8490f790149ce4449b111c29c8ebb00,
-    type: 2}
-  m_PrefabInternal: {fileID: 836459775}
