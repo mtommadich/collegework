@@ -13,10 +13,10 @@ public class SpringEffectorBehavior : MonoBehaviour {
 	MoveBallnoPhysics ballScript;
 
 
+
 	// Use this for initialization of all variables which need to have values at game start
 	void Start () {
-		//targetHealth = 3; we may hard code these values once they are final
-
+		
 		//fetching the arena GameObject and arena class
 		arena = GameObject.FindGameObjectWithTag("arena");
 		arenaScript = arena.GetComponent<Arena> ();
@@ -36,6 +36,7 @@ public class SpringEffectorBehavior : MonoBehaviour {
 			//behavior 1 subtract health
 			targetHealth--;
 			ballScript.speedBoost ();
+			//ballScript.bounceFX (bounceAudio);
 
 			//if target health is 0:
 			if (targetHealth < 1) {

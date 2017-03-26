@@ -36,7 +36,9 @@ public class CameraShake : MonoBehaviour {
 	}
 	//Cracks the screen / @author Mario Tommadich 
 	public void Crack (Vector3 crackPosition){
+		crackPosition.z = 0.0f;
 		Instantiate (cracks[Random.Range(0,cracks.Length)], crackPosition, Quaternion.identity);
+
 	}
 
 	public IEnumerator cShake (float duration, float amount) {

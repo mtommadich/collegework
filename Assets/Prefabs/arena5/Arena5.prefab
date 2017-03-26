@@ -951,6 +951,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballStopped: 0
+  isBoosted: 0
+  hasGravity: 0
+  fakeGravity: 0
   zmax: 12
   zmin: -2
   xmax: 3
@@ -969,6 +972,7 @@ MonoBehaviour:
   bounceWall: {fileID: 8300000, guid: de25998762382574d83e898d36a887e9, type: 3}
   bouncePaddle: {fileID: 8300000, guid: 7131aa46e093ad7489a52a0f97d01a93, type: 3}
   bounceMiss: {fileID: 8300000, guid: 7b03e15fd91aa8b4aa7a4ca6c082833b, type: 3}
+  bounceSpring: {fileID: 8300000, guid: 2b3794ca74584324aa2bb34e6a45a806, type: 3}
 --- !u!114 &114000013524774542
 MonoBehaviour:
   m_ObjectHideFlags: 1
