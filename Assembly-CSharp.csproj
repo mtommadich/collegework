@@ -527,6 +527,8 @@
      <Compile Include="Assets\_scripts\SpringEffectorBehavior.cs" />
      <Compile Include="Assets\_scripts\TouchScript.cs" />
      <Compile Include="Assets\_scripts\moveBall.cs" />
+     <Compile Include="Assets\_scripts\moveBehaviourGregTarget2.cs" />
+     <Compile Include="Assets\_scripts\moveBehaviourGregTarget2alt.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
      <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
      <None Include="Assets\Fungus\Docs\README.txt" />

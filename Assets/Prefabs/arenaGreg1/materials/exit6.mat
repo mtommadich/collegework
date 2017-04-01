@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: exit5
+  m_Name: exit6
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 1
@@ -121,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0, b: 0, a: 1}
+      second: {r: 0.6965518, g: 1, b: 0, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 8.1590805, g: 2.3397362, b: 2.4601355, a: 1}
+      second: {r: 8.109662, g: 9.649, b: 1.0642272, a: 1}
