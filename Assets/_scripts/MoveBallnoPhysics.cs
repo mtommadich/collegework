@@ -31,6 +31,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	public AudioClip bounceWall;
 	public AudioClip bouncePaddle;
 	public AudioClip bounceMiss;
+	public AudioClip bounceSpring;
 	AudioSource audioSource;
 	private GameObject paddle;
 	private float paddlex;
@@ -137,8 +138,8 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		}
 	}
 
-	void bounceFX (AudioClip fx){
-		
+	public void bounceFX (AudioClip fx){
+		audioSource.Stop ();
 		audioSource.clip = fx;
 		audioSource.Play ();
 	}
@@ -172,6 +173,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	}
 
 	public void speedBoost(){
+		bounceFX (bounceSpring);
 		speedZ *= 2.0f;
 		isBoosted = true;
 	}

@@ -33,3 +33,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Library/assetDatabase3
+Library/assetDatabase3
+Library/LastSceneManagerSetup.txt
+Library/metadata/00/00000000000000004000000000000000
+*.txt
+Library/CurrentLayout.dwlt
+Library/assetDatabase3
