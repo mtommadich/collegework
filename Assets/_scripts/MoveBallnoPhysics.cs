@@ -42,6 +42,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	GameObject camera;
 	private GameObject manager;
 	private GameManager managerScript;
+	private GameObject gravityEffect;
 	CameraShake shaker;
 
 
@@ -54,6 +55,13 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		shaker = camera.GetComponent<CameraShake> ();
 		manager = GameObject.FindGameObjectWithTag ("manager");
 		managerScript = manager.GetComponent<GameManager> ();
+
+		if (GameObject.FindGameObjectWithTag ("gravityeffect") == null) {
+			hasGravity = false;
+		} else {
+			gravityEffect = GameObject.FindGameObjectWithTag ("gravityeffect");
+			gravityEffect.SetActive (false);
+		}
 
 		startPos = paddle.transform.position;
 		speedX = startSpeedX;
@@ -166,9 +174,11 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		hasGravity = !hasGravity;
 
 		if (hasGravity) {
-			fakeGravity = 0.06f;
+			fakeGravity = 0.04f;
+			gravityEffect.SetActive (true);
 		} else {
 			fakeGravity = 0.0f;
+			gravityEffect.SetActive (false);
 		}			
 	}
 

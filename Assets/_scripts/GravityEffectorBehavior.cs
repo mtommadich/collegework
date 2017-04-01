@@ -13,6 +13,7 @@ public class GravityEffectorBehavior : MonoBehaviour {
 	MoveBallnoPhysics ballScript;
 
 
+
 	// Use this for initialization of all variables which need to have values at game start
 	void Start () {
 		//targetHealth = 3; we may hard code these values once they are final
@@ -20,8 +21,10 @@ public class GravityEffectorBehavior : MonoBehaviour {
 		//fetching the arena GameObject and arena class
 		arena = GameObject.FindGameObjectWithTag("arena");
 		arenaScript = arena.GetComponent<Arena> ();
+		//fetching the ball
 		ball = GameObject.FindGameObjectWithTag("ball");
 		ballScript = ball.GetComponent<MoveBallnoPhysics>();
+
 
 	}
 
@@ -37,6 +40,7 @@ public class GravityEffectorBehavior : MonoBehaviour {
 			targetHealth--;
 			ballScript.toggleGravity ();
 
+
 			//if target health is 0:
 			if (targetHealth < 1) {
 				// create explosion object
@@ -48,17 +52,8 @@ public class GravityEffectorBehavior : MonoBehaviour {
 				Destroy (gameObject);
 			}
 
-			//behavior 2
-			Vector3 tmpPosition = transform.position;
-			int randomPosition = Random.Range(0, arenaScript.backTargetValues.Length);
-			tmpPosition.x = arenaScript.backTargetValues[randomPosition].x;
-			tmpPosition.y = arenaScript.backTargetValues[randomPosition].y;
-			transform.position = tmpPosition;
-
-
-
-
-
 		}
 	}
+
+
 }

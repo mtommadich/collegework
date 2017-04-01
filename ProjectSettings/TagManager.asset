@@ -11,6 +11,8 @@ TagManager:
   - arena
   - manager
   - UI
+  - target
+  - gravityeffect
   layers:
   - Default
   - TransparentFX
