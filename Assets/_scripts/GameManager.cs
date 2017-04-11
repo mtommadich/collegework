@@ -5,6 +5,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public string unlockedScene;
@@ -18,13 +19,14 @@ public class GameManager : MonoBehaviour {
 	private TouchScript touchScript;
 //	public bool canContinue;
 	public bool isPaused;
+	public GameObject pauseUI;
+
 
 
 	// Use this for initialization
 	void Start () {		
 		camera = GameObject.FindGameObjectWithTag ("MainCamera");
 		touchScript = camera.GetComponent<TouchScript> ();
-
 
 		if (!SceneManager.GetActiveScene ().name.Equals("Credits")) {
 			unlockedScene = SceneManager.GetActiveScene ().name;
@@ -68,6 +70,15 @@ public class GameManager : MonoBehaviour {
 			Debug.Log ("Difficulty: "+difficulty);
 			hiScore = PlayerPrefs.GetInt ("hiScore");
 			Debug.Log ("hiScore: "+hiScore);
+		}
+
+		if (GameObject.FindGameObjectWithTag ("pauseUI") == null) {
+			Debug.Log ("pauseUI is null");
+			return;
+		} else {
+			pauseUI = GameObject.FindGameObjectWithTag ("pauseUI");
+			pauseUI.SetActive (false);
+		Debug.Log (pauseUI.name+" deactivated");
 		}
 
 	}
@@ -167,10 +178,15 @@ public class GameManager : MonoBehaviour {
 		isPaused = !isPaused;
 
 		if (isPaused) {
+			pauseUI.SetActive (true);
+			touchScript.enabled = false;
 			Time.timeScale = 0;
+
 			//touchScript.enabled = false; - buggy
 		} else {
 			Time.timeScale = 1;
+			pauseUI.SetActive (false);
+			touchScript.enabled = true;
 		//	touchScript.enabled = true; - buggy
 		}
 	}

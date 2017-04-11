@@ -13,6 +13,7 @@ TagManager:
   - UI
   - target
   - gravityeffect
+  - pauseUI
   layers:
   - Default
   - TransparentFX
