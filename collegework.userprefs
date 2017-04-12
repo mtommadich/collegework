@@ -5,12 +5,12 @@
       <File FileName="Assets\_scripts\Arena.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\BackTargetSimpleBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\BackTargetMoving.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\MoveBallnoPhysics.cs" Line="181" Column="1" />
+      <File FileName="Assets\_scripts\MoveBallnoPhysics.cs" Line="178" Column="1" />
       <File FileName="Assets\_scripts\TouchScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\CameraShake.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\GameManager.cs" Line="189" Column="29" />
+      <File FileName="Assets\_scripts\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\ExitBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\GravityEffectorBehavior.cs" Line="58" Column="2" />
+      <File FileName="Assets\_scripts\GravityEffectorBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\SpringEffectorBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
