@@ -7,8 +7,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class MoveBallnoPhysics : MonoBehaviour {
-
-
+	
 	public bool ballStopped;
 	public bool isBoosted;
 	public bool hasGravity;
@@ -47,6 +46,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 
 
 
+
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent <AudioSource> ();
@@ -55,6 +55,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		shaker = camera.GetComponent<CameraShake> ();
 		manager = GameObject.FindGameObjectWithTag ("manager");
 		managerScript = manager.GetComponent<GameManager> ();
+
 
 		if (GameObject.FindGameObjectWithTag ("gravityeffect") == null) {
 			hasGravity = false;
@@ -98,6 +99,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			CameraShake.Shake(0.1f, 0.2f);
 			managerScript.subtractLive();
 			bounceFX (bounceMiss);
+
 
 		}
 
@@ -187,4 +189,6 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		speedZ *= 2.0f;
 		isBoosted = true;
 	}
+
+
 }

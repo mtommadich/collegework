@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class CameraShake : MonoBehaviour {
 
@@ -15,11 +16,19 @@ public class CameraShake : MonoBehaviour {
 	private float _timeAtLastFrame;
 	private float _fakeDelta;
 	public GameObject[] cracks;
+	private BlurOptimized blur;
+	private GameObject camera;
 
 	void Awake()
 	{
 		instance = this;
 
+
+	}
+
+	void Start(){
+		camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		blur = camera.GetComponent<BlurOptimized> ();
 	}
 
 	void Update() {
@@ -30,6 +39,7 @@ public class CameraShake : MonoBehaviour {
 	}
 
 	public static void Shake (float duration, float amount) {
+		
 		instance._originalPos = instance.gameObject.transform.localPosition;
 		instance.StopAllCoroutines();
 		instance.StartCoroutine(instance.cShake(duration, amount));
@@ -43,7 +53,7 @@ public class CameraShake : MonoBehaviour {
 
 	public IEnumerator cShake (float duration, float amount) {
 		float endTime = Time.time + duration;
-
+		blur.enabled = true;
 		while (duration > 0) {
 			transform.localPosition = _originalPos + Random.insideUnitSphere * amount;
 
@@ -53,6 +63,7 @@ public class CameraShake : MonoBehaviour {
 		}
 
 		transform.localPosition = _originalPos;
+		blur.enabled = false;
 	}
 
 }
