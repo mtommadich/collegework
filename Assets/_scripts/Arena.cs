@@ -20,32 +20,25 @@ public class Arena : MonoBehaviour {
 	public GameObject gameManager;
 	GameManager manager;
 	public GameObject exit;
-
 	public int targetCount;
-	//to do:
-	//private int obstacleCount;
-	//private int hazardCount;
+
 
 	// Use this for initialization
 	void Start () {
 
-		//find the GameManager object
+		//find the GameManager object and make it update the healthUI
 		gameManager = GameObject.FindGameObjectWithTag ("manager");
 		manager = gameManager.GetComponent<GameManager> ();
+		manager.UpdateLifeUI ();
 
-		//Send Scene title to GameManager
-		//manager.setUnlockedScene(
-		Debug.Log ("Entering "+SceneManager.GetActiveScene().name);
+		Debug.Log ("Arena.cs - Entering "+SceneManager.GetActiveScene().name);
+
 		/* Shuffle the coordinate values array (backTargetValues) of the back targets 
 		 * in order to get a randomized array of possible target positions.
 		 */
 		spawnTargets ();
-	}
-	
-	// Update is called once per frame - we will probably not ever need to do anything during Update in this script
-	void Update () {
+	}	
 
-	}
 
 	//this subtracts 1 from the total target count each time it is called and instantiates an exit object if targetCount is 0
 	public void removeTarget(){
@@ -80,14 +73,16 @@ public class Arena : MonoBehaviour {
 		}
 	}
 
-	/* Iterate over the array of backTargets and instantiate each of them at a
+		/* Iterate over the arrays of Targets and instantiate each of them at a
 		 * target position from the randomized TargetValues arrays. This way 
 		 * the targets will show in different positions each time the game is started,
 		 * without having to worry about accidentally placing more than one 
 		 * target at the same position.
 		 */
 	public void spawnTargets(){
-		
+		/* First of all shuffle the coordinate value arrays of the targets 
+		 * in order to get a randomized array of possible target positions.
+		 */
 		targetCount = backTargets.Length + leftTargets.Length + rightTargets.Length;
 		randomizeArr (backTargetValues);
 		randomizeArr (leftTargetValues);

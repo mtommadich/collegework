@@ -40,7 +40,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1140722651219394
 GameObject:
@@ -58,7 +58,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1153103571213850
 GameObject:
@@ -128,7 +128,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1367696586576838
 GameObject:
@@ -146,7 +146,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1504256500639246
 GameObject:
@@ -164,7 +164,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1558499872143056
 GameObject:
@@ -395,11 +395,11 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1366961461515398}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 2
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 939930ee89a13d6468450dbfd78c586a, type: 2}
   m_StaticBatchInfo:
@@ -457,11 +457,11 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1140722651219394}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 97ff2793337ad4a4a9b962a99b5d08af, type: 2}
   m_StaticBatchInfo:
@@ -488,11 +488,11 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504256500639246}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: bb3f7268c79b44f4280879a0a875355c, type: 2}
   m_StaticBatchInfo:
@@ -520,10 +520,10 @@ MeshRenderer:
   m_GameObject: {fileID: 1558499872143056}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 8f0ac4e8ac49a1b45a32f38eb3191f4e, type: 2}
   m_StaticBatchInfo:
@@ -581,11 +581,11 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367696586576838}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 55b55759a04a3f244b61dc4f34bb2768, type: 2}
   m_StaticBatchInfo:
@@ -987,7 +987,7 @@ MonoBehaviour:
   obstacles: []
   hazards: []
   gameManager: {fileID: 0}
-  exit: {fileID: 1000011706346240, guid: b046e56792a97cd4a8cb14a3dbb262f5, type: 2}
+  exit: {fileID: 1000011706346240, guid: 97dbd5850c432f24abf412e8fface093, type: 2}
   targetCount: 0
 --- !u!114 &114966272846682728
 MonoBehaviour:

@@ -88,11 +88,11 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010580749700}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.22794116, g: 0.7124744, b: 1, a: 1}
-  m_Intensity: 2.96
+  m_Intensity: 1.96
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

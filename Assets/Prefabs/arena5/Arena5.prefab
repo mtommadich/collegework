@@ -183,7 +183,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000013885870050
 GameObject:
@@ -882,7 +882,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.14705884, b: 0.27058807, a: 1}
   m_Intensity: 2.02
-  m_Range: 6
+  m_Range: 3.68
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -914,8 +914,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 0.547059, g: 0.43382353, b: 1, a: 1}
-  m_Intensity: 0.9
+  m_Color: {r: 0.9191176, g: 0.9191176, b: 0.9191176, a: 1}
+  m_Intensity: 0.84
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1025,7 +1025,7 @@ MonoBehaviour:
   obstacles: []
   hazards: []
   gameManager: {fileID: 0}
-  exit: {fileID: 1000010580749700, guid: 0f42247fdb2ba754c9fb7252a3618e4c, type: 2}
+  exit: {fileID: 1000010580749700, guid: 4370337cc9a80b04fbb20b0668e0850b, type: 2}
   targetCount: 1
 --- !u!135 &135000011296712780
 SphereCollider:

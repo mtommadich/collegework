@@ -105,4 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetHealth: 1
-  explosion: {fileID: 1000012770364118, guid: e8ff02ad1bcfbd14da801c0dcf2da504, type: 2}
+  explosion: {fileID: 1000012770364118, guid: a134d7b69ab65934d9a919b8bafec177, type: 2}

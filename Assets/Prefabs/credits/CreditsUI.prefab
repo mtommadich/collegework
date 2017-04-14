@@ -134,9 +134,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Thank you for playing Sqong - \xA9 2017 |underdogFood| - Development Demo!\n\nThis
-    was brought to you by:\n\nMario Tommadich - Design / Code / Testing\n\nGreg Dunne
-    - Design / Code / Marketing\n\nSteven Abbey - Design / Code / Business Analysis\n\n\nStay
+  m_Text: "Thank you for playing Sqong - \xA9 2017 |underdogFood| - \nDevelopment
+    Demo!\n\nThis was brought to you by:\n\nMario Tommadich - Design / Code / Testing\n\nGreg
+    Dunne - Design / Code / Marketing\n\nSteven Abbey - Design / Code / Business Analysis\n\nStay
     tuned for the full Version!"
 --- !u!114 &114319516098241356
 MonoBehaviour:
