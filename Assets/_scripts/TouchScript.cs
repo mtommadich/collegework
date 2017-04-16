@@ -5,14 +5,17 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class TouchScript : MonoBehaviour {
 	Vector3 mousePos;
 	private GameObject paddle;
 	GameObject ball;
 	MoveBallnoPhysics ballMover;
+
 	public bool canMove;
 
 	void Start(){
+	//	canMove = true;
 		ball = GameObject.FindGameObjectWithTag ("ball");
 		ballMover = ball.GetComponent<MoveBallnoPhysics> ();
 		paddle = GameObject.FindGameObjectWithTag ("Player");
@@ -22,7 +25,8 @@ public class TouchScript : MonoBehaviour {
 
 		if (canMove) {
 			if (ballMover.ballStopped && Input.GetMouseButtonUp (0)) {
-				ballMover.ballStopped = false;
+			//  ballMover.ballStopped = false;
+				ballMover.startBall();
 			}
 
 			if (Input.GetMouseButton (0)) {
@@ -34,7 +38,7 @@ public class TouchScript : MonoBehaviour {
 		}
 	}
 
-	public void setMovable(){
-		canMove = true;
+	public void toggleMovable(){
+		canMove = !canMove;
 	}
 }

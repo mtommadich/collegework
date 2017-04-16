@@ -1,18 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\Arena.cs">
     <Files>
-      <File FileName="Assets\_scripts\Arena.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\Arena.cs" Line="49" Column="30" />
       <File FileName="Assets\_scripts\BackTargetSimpleBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\BackTargetMoving.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\MoveBallnoPhysics.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\TouchScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\CameraShake.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\GameManager.cs" Line="101" Column="3" />
+      <File FileName="Assets\_scripts\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\ExitBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\GravityEffectorBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\SpringEffectorBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\BGMPlayer.cs" Line="14" Column="1" />
+      <File FileName="Assets\BGMPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\FindBall.cs" Line="19" Column="3" />
+      <File FileName="Assets\_scripts\moveBehaviourGregTarget2.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\moveBehaviourGregTarget2alt.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\DestroyByTime.cs" Line="3" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -235,9 +235,7 @@ GameObject:
   - component: {fileID: 114352759409794238}
   - component: {fileID: 114051929184392770}
   - component: {fileID: 114952001999033472}
-  - component: {fileID: 114068061897545192}
   - component: {fileID: 114325548765739276}
-  - component: {fileID: 114314448881205744}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -605,17 +603,6 @@ MonoBehaviour:
   - {fileID: 1448111491303482, guid: d0fa9327b2c1bce4f8a706d7e9ccd126, type: 2}
   - {fileID: 1369962874180726, guid: ccacdfaf30e504d48b43255fbc6766bb, type: 2}
   - {fileID: 1350513222094434, guid: 421ea3e6965d6454ba154cbbfef8ba1a, type: 2}
---- !u!114 &114068061897545192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1488804474323892}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d891ead83428bc7469514ebeb09c0faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114070054649777052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -882,20 +869,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
---- !u!114 &114314448881205744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1488804474323892}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strengthX: 0.075
-  strengthY: 0.055
-  fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
 --- !u!114 &114325548765739276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -907,9 +880,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.506
-  intensity: 1.15
-  blurSize: 2.06
+  threshold: 1.301
+  intensity: 1.748
+  blurSize: 0.25
   blurIterations: 3
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
@@ -1250,11 +1223,11 @@ MonoBehaviour:
   bgm:
   - {fileID: 8300000, guid: 003053a4bb54d8c4680e751ff7e912c6, type: 3}
   - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 2307a8ea9cd8a7e408d15888111fd69c, type: 3}
-  - {fileID: 8300000, guid: 29eddcbddd989ed4b940d11d225fe3f8, type: 3}
   - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 2307a8ea9cd8a7e408d15888111fd69c, type: 3}
-  - {fileID: 8300000, guid: 21419979cf7d27242b92b5cd5fb8dc01, type: 3}
+  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
+  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
+  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
+  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
   - {fileID: 8300000, guid: 003053a4bb54d8c4680e751ff7e912c6, type: 3}
   manager: {fileID: 0}
 --- !u!114 &114705146923496240
@@ -1491,8 +1464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downsample: 1
-  blurSize: 0
-  blurIterations: 3
+  blurSize: 4
+  blurIterations: 1
   blurType: 0
   blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!114 &114985953796460896

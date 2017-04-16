@@ -880,7 +880,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
-  m_Color: {r: 0.9852941, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.375, b: 0.375, a: 1}
   m_Intensity: 2.02
   m_Range: 6
   m_SpotAngle: 30
@@ -958,9 +958,17 @@ MonoBehaviour:
   leftTargets:
   - {fileID: 1000010957596764, guid: 80ab889c2d2894140a8aba0027de6264, type: 2}
   - {fileID: 1000010957596764, guid: 80ab889c2d2894140a8aba0027de6264, type: 2}
+  - {fileID: 1000012236305654, guid: 4259caaa1c949e54db4271e5344c0a29, type: 2}
+  - {fileID: 1000012236305654, guid: 4259caaa1c949e54db4271e5344c0a29, type: 2}
+  - {fileID: 1000012236305654, guid: ba0720efbb4b74a40a9e818efaec0009, type: 2}
+  - {fileID: 1000012236305654, guid: ba0720efbb4b74a40a9e818efaec0009, type: 2}
   rightTargets:
   - {fileID: 1000012697163598, guid: 39da62c13be43244cac9888913ed0b92, type: 2}
   - {fileID: 1000012697163598, guid: 39da62c13be43244cac9888913ed0b92, type: 2}
+  - {fileID: 1000012236305654, guid: 4259caaa1c949e54db4271e5344c0a29, type: 2}
+  - {fileID: 1000012236305654, guid: 4259caaa1c949e54db4271e5344c0a29, type: 2}
+  - {fileID: 1000012236305654, guid: ba0720efbb4b74a40a9e818efaec0009, type: 2}
+  - {fileID: 1000012236305654, guid: ba0720efbb4b74a40a9e818efaec0009, type: 2}
   backTargetValues:
   - {x: -2.15, y: 2.3, z: 11.9}
   - {x: -2.15, y: 0.7, z: 11.9}
@@ -988,7 +996,6 @@ MonoBehaviour:
   - {x: 2.9, y: 0.7, z: 4.55}
   obstacles: []
   hazards: []
-  gameManager: {fileID: 0}
   exit: {fileID: 1000010580749700, guid: 0f42247fdb2ba754c9fb7252a3618e4c, type: 2}
   targetCount: 1
 --- !u!114 &114000014228998464
@@ -1003,6 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballStopped: 0
+  ballPaused: 0
   isBoosted: 0
   hasGravity: 0
   fakeGravity: 0
@@ -1025,6 +1033,7 @@ MonoBehaviour:
   bouncePaddle: {fileID: 8300000, guid: 7131aa46e093ad7489a52a0f97d01a93, type: 3}
   bounceMiss: {fileID: 8300000, guid: 7b03e15fd91aa8b4aa7a4ca6c082833b, type: 3}
   bounceSpring: {fileID: 0}
+  tutorialScript: {fileID: 0}
 --- !u!135 &135000013034663052
 SphereCollider:
   m_ObjectHideFlags: 1

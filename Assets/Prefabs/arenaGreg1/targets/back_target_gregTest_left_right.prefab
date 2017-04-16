@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23000014208134518}
   - component: {fileID: 114000013167925026}
   m_Layer: 0
-  m_Name: back_target_gregTest_lreft_right
+  m_Name: back_target_gregTest_left_right
   m_TagString: target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,4 +110,3 @@ MonoBehaviour:
   localScale: {x: 0, y: 0, z: 0}
   rotate: {x: 0, y: 0, z: 0}
   speed: 3
-  reverseMove: 1

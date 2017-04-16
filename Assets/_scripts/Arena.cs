@@ -15,27 +15,29 @@ public class Arena : MonoBehaviour {
 	public Vector3[] backTargetValues;
 	public Vector3[] leftTargetValues;
 	public Vector3[] rightTargetValues;
-	public GameObject[] obstacles;
-	public GameObject[] hazards;
-	public GameObject gameManager;
-	GameManager manager;
+	public GameObject[] obstacles; //not used
+	public GameObject[] hazards; //not used
+	private GameObject gameManager;
+	GameManager managerScript;
 	public GameObject exit;
 	public int targetCount;
+	private GameObject ball;
+	Light ballLight;
 
 
 	// Use this for initialization
 	void Start () {
-
+		ball = GameObject.FindGameObjectWithTag("ball");
+		ballLight = ball.GetComponent<Light> ();
 		//find the GameManager object and make it update the healthUI
 		gameManager = GameObject.FindGameObjectWithTag ("manager");
-		manager = gameManager.GetComponent<GameManager> ();
-		manager.UpdateLifeUI ();
+		managerScript = gameManager.GetComponent<GameManager> ();
+		managerScript.UpdateLifeUI ();
 
-		Debug.Log ("Arena.cs - Entering "+SceneManager.GetActiveScene().name);
+		// Debug.Log ("Arena.cs - Entering "+SceneManager.GetActiveScene().name);
 
-		/* Shuffle the coordinate values array (backTargetValues) of the back targets 
-		 * in order to get a randomized array of possible target positions.
-		 */
+		// Populate the arena with targets 
+		 
 		spawnTargets ();
 	}	
 
@@ -44,20 +46,9 @@ public class Arena : MonoBehaviour {
 	public void removeTarget(){
 		targetCount--;
 		if (targetCount < 1) {
+			ballLight.enabled = false;
 			Instantiate (exit);
 		}
-	}
-
-	public void removeObstacle(){
-
-	}
-
-	public void removeHazard(){
-
-	}
-
-	public void missionClear(){
-
 	}
 
 
@@ -73,12 +64,12 @@ public class Arena : MonoBehaviour {
 		}
 	}
 
-		/* Iterate over the arrays of Targets and instantiate each of them at a
-		 * target position from the randomized TargetValues arrays. This way 
-		 * the targets will show in different positions each time the game is started,
-		 * without having to worry about accidentally placing more than one 
-		 * target at the same position.
-		 */
+	/* Iterate over the arrays of Targets and instantiate each of them at a
+	 * target position from the randomized TargetValues arrays. This way 
+	 * the targets will show in different positions each time the game is started,
+	 * without having to worry about accidentally placing more than one 
+	 * target at the same position.
+	*/
 	public void spawnTargets(){
 		/* First of all shuffle the coordinate value arrays of the targets 
 		 * in order to get a randomized array of possible target positions.
@@ -88,6 +79,7 @@ public class Arena : MonoBehaviour {
 		randomizeArr (leftTargetValues);
 		randomizeArr (rightTargetValues);
 
+		//place the three target types at their random positions
 		for (var i = 0; i < backTargets.Length; i++) {
 			GameObject backTarget = backTargets [i];
 			Vector3 targetPosition = backTargetValues [i];
