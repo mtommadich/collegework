@@ -277,7 +277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1635740574318186
 GameObject:
   m_ObjectHideFlags: 1
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 4609702050776198}
   - component: {fileID: 114858706817579562}
   - component: {fileID: 114419837596154346}
+  - component: {fileID: 114907386333217022}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -508,11 +509,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 21419979cf7d27242b92b5cd5fb8dc01, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -729,7 +730,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435698745459640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -772,7 +773,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1183508247161546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -826,7 +827,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138245853758848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -956,7 +957,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446117102749868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1220,23 +1221,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed53c5bcae184f4aa851bb081cf66a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm:
-  - {fileID: 8300000, guid: 003053a4bb54d8c4680e751ff7e912c6, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
-  - {fileID: 8300000, guid: 003053a4bb54d8c4680e751ff7e912c6, type: 3}
-  manager: {fileID: 0}
 --- !u!114 &114705146923496240
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361331991509488}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1383,14 +1374,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385dc18e15f18ba45bae374f2b9ad3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockedScene: 
-  difficulty: 0
-  currLives: 0
+  unlockedScene: scene6_1
+  difficulty: 1
+  currLives: 5
   hiScore: 0
   score: 0
   loadingimage: {fileID: 1103270947000756}
-  camera: {fileID: 0}
-  isPaused: 1
+  camera: {fileID: 1488804474323892}
+  isPaused: 0
   pauseUI: {fileID: 1396060476633062}
   ballBarUI:
   - {fileID: 114372931825192376}
@@ -1425,6 +1416,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114907386333217022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864182637173966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114939260989584672
 MonoBehaviour:
   m_ObjectHideFlags: 1

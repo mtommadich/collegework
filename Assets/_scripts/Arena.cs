@@ -23,6 +23,7 @@ public class Arena : MonoBehaviour {
 	public int targetCount;
 	private GameObject ball;
 	Light ballLight;
+	public AudioClip bgm;
 
 
 	// Use this for initialization

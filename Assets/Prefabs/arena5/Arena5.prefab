@@ -1032,6 +1032,7 @@ MonoBehaviour:
   hazards: []
   exit: {fileID: 1000010580749700, guid: 4370337cc9a80b04fbb20b0668e0850b, type: 2}
   targetCount: 1
+  bgm: {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
 --- !u!135 &135000011296712780
 SphereCollider:
   m_ObjectHideFlags: 1

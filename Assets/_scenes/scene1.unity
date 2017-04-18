@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.14230102, g: 0.17761002, b: 0.41176468, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.05
@@ -34,7 +34,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.158
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -46,8 +46,8 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 1
-    m_AlbedoBoost: 1
+    m_IndirectOutputScale: 2
+    m_AlbedoBoost: 4
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
@@ -55,7 +55,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 4
     m_Resolution: 20
-    m_BakeResolution: 20
+    m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 1
@@ -67,11 +67,11 @@ LightmapSettings:
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_DirectLightInLightProbes: 1
-    m_FinalGather: 0
+    m_FinalGather: 1
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 112000001, guid: f6db32c01cf3d7648bfcfd41b74c4ea3,
+  m_LightingDataAsset: {fileID: 112000001, guid: 54b4b5bd90cd03f4baf50d553052e63b,
     type: 2}
   m_RuntimeCPUUsage: 100
 --- !u!196 &4
@@ -187,6 +187,15 @@ Prefab:
       propertyPath: tutorialScript
       value: 
       objectReference: {fileID: 1020634268}
+    - target: {fileID: 114909378087554118, guid: 2aa3a54a991090d4ba2c13012690c165,
+        type: 2}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
+    - target: {fileID: 1600481794182396, guid: 2aa3a54a991090d4ba2c13012690c165, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aa3a54a991090d4ba2c13012690c165, type: 2}
   m_IsPrefabParent: 0

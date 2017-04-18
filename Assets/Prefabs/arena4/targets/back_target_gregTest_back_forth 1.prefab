@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52a2dbe7bb97c144b22886435d37790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHealth: 2
+  targetHealth: 3
   explosion: {fileID: 1000013426282752, guid: 43b6c5fbb72ce894284e25db4a4d0b2f, type: 2}
   position: {x: 0, y: 0, z: 0}
   localScale: {x: 0, y: 0, z: 0}

@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114430150266651190}
   - component: {fileID: 82236219675058144}
   m_Layer: 5
-  m_Name: GameManager
+  m_Name: GameManagerMainMenu
   m_TagString: manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,11 +968,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 003053a4bb54d8c4680e751ff7e912c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1670,7 +1670,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010814690410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed53c5bcae184f4aa851bb081cf66a1, type: 3}
   m_Name: 

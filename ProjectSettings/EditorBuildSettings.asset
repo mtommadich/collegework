@@ -10,14 +10,38 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_scenes/scene1.unity
   - enabled: 1
+    path: Assets/_scenes/scene1_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene1_2.unity
+  - enabled: 1
     path: Assets/_scenes/scene2.unity
+  - enabled: 1
+    path: Assets/_scenes/scene2_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene2_2.unity
   - enabled: 1
     path: Assets/_scenes/scene3.unity
   - enabled: 1
+    path: Assets/_scenes/scene3_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene3_2.unity
+  - enabled: 1
     path: Assets/_scenes/scene4.unity
+  - enabled: 1
+    path: Assets/_scenes/scene4_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene4_2.unity
   - enabled: 1
     path: Assets/_scenes/scene5.unity
   - enabled: 1
+    path: Assets/_scenes/scene5_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene5_2.unity
+  - enabled: 1
     path: Assets/_scenes/scene6.unity
+  - enabled: 1
+    path: Assets/_scenes/scene6_1.unity
+  - enabled: 1
+    path: Assets/_scenes/scene6_2.unity
   - enabled: 1
     path: Assets/_scenes/Credits.unity

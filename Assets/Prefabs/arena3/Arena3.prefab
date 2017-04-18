@@ -1098,10 +1098,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backTargets:
   - {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959, type: 2}
-  - {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959, type: 2}
-  - {fileID: 1514996489915768, guid: 16e10a46d60be8342b08205959368959, type: 2}
   - {fileID: 1000012236305654, guid: 1ff279edce573e045a105835f5eb3dee, type: 2}
-  - {fileID: 1000012236305654, guid: 1ff279edce573e045a105835f5eb3dee, type: 2}
+  - {fileID: 1000012875103626, guid: 83c6f8bd50dcc82408e6e426d793a419, type: 2}
+  - {fileID: 1000012875103626, guid: 83c6f8bd50dcc82408e6e426d793a419, type: 2}
   leftTargets:
   - {fileID: 1000012463697870, guid: a0df5d64ce2028344b7b1847dd40c2c1, type: 2}
   - {fileID: 1000012463697870, guid: a0df5d64ce2028344b7b1847dd40c2c1, type: 2}
@@ -1139,6 +1138,7 @@ MonoBehaviour:
   hazards: []
   exit: {fileID: 1000011706346240, guid: 332a9880d67ad294c8d634841a09913d, type: 2}
   targetCount: 1
+  bgm: {fileID: 8300000, guid: 59ef2476180950a4387e808e3e278950, type: 3}
 --- !u!114 &114000013874789280
 MonoBehaviour:
   m_ObjectHideFlags: 1
