@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33030408793515054}
   - component: {fileID: 64626660154426582}
   - component: {fileID: 23984190659248868}
+  - component: {fileID: 114486152840147408}
   m_Layer: 0
   m_Name: crack2
   m_TagString: Untagged
@@ -94,3 +95,15 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114486152840147408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614958587590364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2621890541cf71b45ac0392fa94acab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5

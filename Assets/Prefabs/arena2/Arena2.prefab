@@ -27,7 +27,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000010225587324
 GameObject:
@@ -60,7 +60,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000011829982190
 GameObject:
@@ -78,7 +78,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000011940818388
 GameObject:
@@ -130,7 +130,7 @@ GameObject:
   m_TagString: arena
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000012169860598
 GameObject:
@@ -146,7 +146,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000012413926938
 GameObject:
@@ -186,7 +186,7 @@ GameObject:
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000014146806710
 GameObject:
@@ -204,7 +204,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1000014252298982
 GameObject:
@@ -395,13 +395,13 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011829982190}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55b55759a04a3f244b61dc4f34bb2768, type: 2}
+  - {fileID: 2100000, guid: 2a671b6212d656b42aae47b12bff5016, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -488,13 +488,13 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010105186168}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb3f7268c79b44f4280879a0a875355c, type: 2}
+  - {fileID: 2100000, guid: 97ec930978e37944f96fcadec35ca69c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -550,13 +550,13 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010866716118}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 939930ee89a13d6468450dbfd78c586a, type: 2}
+  - {fileID: 2100000, guid: 253cde155bf5a1d4baf658c81e813bd6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -612,13 +612,13 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013241634702}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97ff2793337ad4a4a9b962a99b5d08af, type: 2}
+  - {fileID: 2100000, guid: 8668e2317bc1dae4bb2976c9fdfa57a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -881,7 +881,7 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 0.9852941, g: 0.9852941, b: 0.9852941, a: 1}
-  m_Intensity: 0.23
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -900,7 +900,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0.1
   m_ShadowRadius: 0
@@ -914,8 +914,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
-  m_Color: {r: 1, g: 0.6, b: 0, a: 1}
-  m_Intensity: 2.02
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1.91
   m_Range: 6
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -954,10 +954,10 @@ MonoBehaviour:
   - {fileID: 1000012875103626, guid: b1a34181014c64f46a9babc51a6922d1, type: 2}
   - {fileID: 1000012875103626, guid: b1a34181014c64f46a9babc51a6922d1, type: 2}
   - {fileID: 1000012875103626, guid: b1a34181014c64f46a9babc51a6922d1, type: 2}
-  - {fileID: 1000012875103626, guid: b1a34181014c64f46a9babc51a6922d1, type: 2}
   leftTargets:
   - {fileID: 1000012463697870, guid: e87fa56c36b8eaf4b901877488fe44bd, type: 2}
   - {fileID: 1000012463697870, guid: e87fa56c36b8eaf4b901877488fe44bd, type: 2}
+  - {fileID: 1000012236305654, guid: 0efeb5a902ec1c042bbb2d376034a399, type: 2}
   rightTargets:
   - {fileID: 1000012063559200, guid: 2b753c6d82701614a8af7f9410de175a, type: 2}
   - {fileID: 1000012063559200, guid: 2b753c6d82701614a8af7f9410de175a, type: 2}
@@ -988,9 +988,9 @@ MonoBehaviour:
   - {x: 2.9, y: 2.3, z: 4.55}
   obstacles: []
   hazards: []
-  gameManager: {fileID: 0}
   exit: {fileID: 1000011706346240, guid: b046e56792a97cd4a8cb14a3dbb262f5, type: 2}
   targetCount: 0
+  bgm: {fileID: 8300000, guid: 29eddcbddd989ed4b940d11d225fe3f8, type: 3}
 --- !u!114 &114000012642131572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,6 +1003,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballStopped: 0
+  ballPaused: 0
+  isBoosted: 0
+  hasGravity: 0
+  fakeGravity: 0
   zmax: 12
   zmin: -2
   xmax: 3
@@ -1021,6 +1025,8 @@ MonoBehaviour:
   bounceWall: {fileID: 8300000, guid: de25998762382574d83e898d36a887e9, type: 3}
   bouncePaddle: {fileID: 8300000, guid: 7131aa46e093ad7489a52a0f97d01a93, type: 3}
   bounceMiss: {fileID: 8300000, guid: 7b03e15fd91aa8b4aa7a4ca6c082833b, type: 3}
+  bounceSpring: {fileID: 0}
+  tutorialScript: {fileID: 0}
 --- !u!135 &135000013480525382
 SphereCollider:
   m_ObjectHideFlags: 1

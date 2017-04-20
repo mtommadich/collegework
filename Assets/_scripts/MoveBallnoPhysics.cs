@@ -5,11 +5,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Fungus;
 
 public class MoveBallnoPhysics : MonoBehaviour {
-
-
+	
 	public bool ballStopped;
+	public bool ballPaused;
 	public bool isBoosted;
 	public bool hasGravity;
 	public float fakeGravity;
@@ -28,6 +29,9 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	public float ballZ;
 	public float ballX;
 	public float ballY;
+	private float tmpSpeedX = 0.0f;
+	private float tmpSpeedY = 0.0f;
+	private float tmpSpeedZ = 0.0f;
 	public AudioClip bounceWall;
 	public AudioClip bouncePaddle;
 	public AudioClip bounceMiss;
@@ -44,17 +48,26 @@ public class MoveBallnoPhysics : MonoBehaviour {
 	private GameManager managerScript;
 	private GameObject gravityEffect;
 	CameraShake shaker;
+	public Flowchart tutorialScript;
+
+	//this boolean is only used for the very first ingame tutorial 
+	//it should always default to false!
+	private bool tutorial;
+
+
 
 
 
 	// Use this for initialization
 	void Start () {
+		
 		audioSource = GetComponent <AudioSource> ();
 		paddle = GameObject.FindGameObjectWithTag("Player");
 		camera = GameObject.FindGameObjectWithTag("MainCamera");
 		shaker = camera.GetComponent<CameraShake> ();
 		manager = GameObject.FindGameObjectWithTag ("manager");
 		managerScript = manager.GetComponent<GameManager> ();
+
 
 		if (GameObject.FindGameObjectWithTag ("gravityeffect") == null) {
 			hasGravity = false;
@@ -67,7 +80,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		speedX = startSpeedX;
 		speedY = startSpeedY;
 		speedZ = startSpeedZ;
-		//stopBall (startPos);
+		tutorial = false;
 		ballStopped = true;
 		hasGravity = false;
 		isBoosted = false;
@@ -87,6 +100,7 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			transform.position = ballMovement;
 		}
 
+		//ball hit the wall in the end
 		if (transform.position.z >= zmax - .2f && speedZ >0.0f) {
 			speedZ = -speedZ;
 			bounceFX (bounceWall);
@@ -98,6 +112,10 @@ public class MoveBallnoPhysics : MonoBehaviour {
 			CameraShake.Shake(0.1f, 0.2f);
 			managerScript.subtractLive();
 			bounceFX (bounceMiss);
+
+			if (tutorial){
+				tutorialScript.ExecuteBlock("Ouch");
+			}
 
 		}
 
@@ -154,11 +172,16 @@ public class MoveBallnoPhysics : MonoBehaviour {
 
 	//starts the ball at the position of the paddle
 	public void startBall(){
-		//transform.position = paddle.transform.position;
+
 		speedX = startSpeedX;
 		speedY = startSpeedY;
 		speedZ = startSpeedZ;
 		ballStopped = false;
+
+		//Execute AfterMove block in tutorial script if we are in a tutorial
+		if (tutorial){
+			tutorialScript.ExecuteBlock("AfterMove");
+		}
 	}
 
 	//stops the ball when called and puts it at the passed-in stopPosition
@@ -168,6 +191,26 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		speedZ = 0.0f;
 		transform.position = stopPosition;
 		ballStopped = true;
+	}
+
+	public void pauseBall(){		
+			tmpSpeedX = speedX;
+			speedX = 0.0f;
+			tmpSpeedY = speedY;
+			speedY = 0.0f;
+			tmpSpeedZ = speedZ;
+			speedZ = 0.0f;
+			ballPaused = true;
+		} 
+
+	public void unpauseBall(){
+			speedX = tmpSpeedX;
+			speedY = tmpSpeedY;
+			speedZ = tmpSpeedZ;
+			tmpSpeedX = 0.0f;
+			tmpSpeedY = 0.0f;
+			tmpSpeedZ = 0.0f;
+			ballPaused = false;
 	}
 
 	public void toggleGravity(){
@@ -186,5 +229,13 @@ public class MoveBallnoPhysics : MonoBehaviour {
 		bounceFX (bounceSpring);
 		speedZ *= 2.0f;
 		isBoosted = true;
+	}
+
+	public void setTutorial(){
+		tutorial = true;
+	}
+
+	public bool isTutorial(){
+		return tutorial;
 	}
 }

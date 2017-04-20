@@ -14,9 +14,10 @@ public class moveBehaviourGregTarget2 : MonoBehaviour {
 	public Vector3 position;
 	public Vector3 localScale;
 	public Vector3 rotate;
-
+	private GameObject ball;
+	MoveBallnoPhysics ballMover;
 	public float speed;
-	public bool reverseMove = false;
+	private bool reverseMove = false;
 
 	private float startTime;
 	private float journeyLength;
@@ -27,11 +28,13 @@ public class moveBehaviourGregTarget2 : MonoBehaviour {
 
 	// Use this for initialization of all variables which need to have values at game start
 	void Start () {
-		targetHealth = 1;
-
+		
 		//fetching the arena GameObject and arena class
 		arena = GameObject.FindGameObjectWithTag("arena");
 		arenaScript = arena.GetComponent<Arena> ();
+
+		ball = GameObject.FindGameObjectWithTag ("ball");
+		ballMover = ball.GetComponent<MoveBallnoPhysics> ();
 
 		//left and right boundary positions.
 		leftBoundary = new Vector3 (-2.15f,transform.position.y,transform.position.z);
@@ -72,12 +75,11 @@ public class moveBehaviourGregTarget2 : MonoBehaviour {
 
 	//on collision with the ball:
 	void OnTriggerEnter(Collider other) {
-		//transform.position = new Vector3 (0, 1.5f,0.1f);
-		//transform.localScale += new Vector3(0.2f, 0.2f, 0);
 
 		if (other.CompareTag ("ball")) {
 			//subtract target health
 			targetHealth--;
+			ballMover.speedZ*=-1;
 
 			//if target health is 0:
 			if(targetHealth < 1){
